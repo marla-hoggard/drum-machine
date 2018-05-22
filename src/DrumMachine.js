@@ -26,11 +26,16 @@ export default class DrumMachine extends Component {
 
 	playDrum(letter) {
 		const drum = document.getElementById(letter);
+		if (!drum.paused) {
+			drum.pause();
+			drum.currentTime = 0;
+		}
 		drum.play();
-
+		//Change look of drum key then change it back
 		const drumPad = document.getElementById(`${letter}-drum-pad`);
 		drumPad.classList.add('drum-pressed');
 		setTimeout(() => drumPad.classList.remove('drum-pressed'), 500);
+
 		this.setState({
 			lastPlayed: letter,
 		});
