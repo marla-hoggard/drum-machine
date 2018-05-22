@@ -9,10 +9,10 @@ export default class App extends Component {
 	}
 	render() {
 	    return (
-		      <div>
+		    <div>
 		        <div className="main-title">Play the Drums!</div>
 		        <DrumMachine />
-		      </div>
+		    </div>
 	    );
   }
 }
