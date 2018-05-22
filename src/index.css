@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Kavivanar', cursive;
+  text-align: center;
+}
+
+.main-title {
+	padding-top: 10px;
+	font-size: 50px;
+}
+
+#drum-player {
+	border: 2px white solid;
+	margin: 20px 60px;
+	padding: 20px;
+}
+
+#display {
+	border: 1px white solid;
+	max-width: 150px;
+	margin: auto;
+	font-size: 24px;
+}
+
+#drums {
+	display: grid;
+	width: 250px;
+	margin: auto;
+	margin-top: 5px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	justify-items: center;
+	align-content: center;
+}
+
+.drum-pad {
+	border: 1px yellow solid;
+	border-radius: 10%;
+	width: 75px;
+	height: 75px;
+	margin-top: 15px;
+}
+
+/*.drum-pad:hover {
+	background-color: blue;
+}*/
+
+.drum-text {
+	margin-top: 22px;
+	font-size: 20px;
+}
+
+.clip {
+
+}
+
+
