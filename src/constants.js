@@ -1,5 +1,5 @@
 export const LETTER_MAP = ['Q','W','E','A','S','D','Z','X','C'];
-export const DRUM_MAP = {
+export const DRUM_FILES = {
 	'Q': 'clap-analog.wav',
 	'W': 'hihat-dist01.wav',
 	'E': 'kick-big.wav',
@@ -11,7 +11,7 @@ export const DRUM_MAP = {
 	'C': 'tom-acoustic02.wav'
 }
 
-export const DRUM_MAP2 = {
+export const DRUM_NAMES = {
 	'Q': 'CLAP',
 	'W': 'HIHAT',
 	'E': 'KICK BIG',

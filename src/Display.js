@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { DRUM_MAP2 } from './constants';
+import { DRUM_NAMES } from './constants';
 import './index.css';
 
-export default function Display(props) {
+const Display = ({value}) => {
 	return (
 		<div id="display">
-			{DRUM_MAP2[props.value]}
+			{DRUM_NAMES[value]}
 		</div>
 	);
 }
+
+export default Display;

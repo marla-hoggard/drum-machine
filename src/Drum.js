@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import Audio from './Audio';
 import './index.css';
 
-export default function Drum(props) {
+const Drum = ({drum, onClick}) => {
 	return (
-		<div id={`${props.drum}-drum-pad`} className="drum-pad" 
-				onClick={() => props.onClick(props.drum)}>
-			<Audio drum={props.drum} />
+		<div id={`${drum}-drum-pad`} className="drum-pad" 
+				onClick={() => onClick(drum)}>
+			<Audio drum={drum} />
 			<div className="drum-text">
-				{props.drum}
+				{drum}
 			</div>
 		</div>
 	);
 }
+
+export default Drum;
