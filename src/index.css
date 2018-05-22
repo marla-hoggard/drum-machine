@@ -20,7 +20,7 @@ body {
 
 #display {
 	border: 1px white solid;
-	max-width: 150px;
+	width: 175px;
 	margin: auto;
 	font-size: 24px;
 }
@@ -44,9 +44,9 @@ body {
 	margin-top: 15px;
 }
 
-/*.drum-pad:hover {
+.drum-pad:hover {
 	background-color: blue;
-}*/
+}
 
 .drum-text {
 	margin-top: 22px;

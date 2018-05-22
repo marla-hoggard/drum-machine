@@ -5,14 +5,38 @@ import { LETTER_MAP } from './constants';
 import './index.css';
 
 export default class DrumMachine extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			lastPlayed: "start",
+		};
+		this.playDrum = this.playDrum.bind(this);
+	}
+
 	renderDrum(i) {
 		const letter = LETTER_MAP[i];
 		return (
 			<Drum 
 				key={letter}
 				drum={letter}
+				onClick={this.playDrum}
 			/>
 		);
+	}
+
+	playDrum(letter) {
+		const drum = document.getElementById(letter);
+		drum.play();
+		this.setState({
+			lastPlayed: letter,
+		});
+	}
+
+	onKeyDown(e) {
+		console.log(e.key);
+		if (LETTER_MAP.includes(e.key)) {
+			console.log("matched!");
+		}
 	}
 
 	render() {
@@ -31,8 +55,8 @@ export default class DrumMachine extends Component {
 
 	    //render function's return
 	    return (
-	      <div id="drum-player">
-	        <Display value="test"/>
+	      <div id="drum-player" onKeyDown={(e) => this.onKeyDown(e)}>
+	        <Display value={this.state.lastPlayed}/>
 	        <div id="drums">
 	        	{drums}
 	        </div>
