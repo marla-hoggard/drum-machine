@@ -15,13 +15,6 @@ export default class Audio extends Component {
 	}
 }
 
-//Imports all files from a folder and places them in an object with filenames as keys
-// function importAll(context) {
-//   let clips = {};
-//   context.keys().map((item, index) => { clips[item.replace('./', '')] = context(item); });
-//   return clips;
-// }
-
 function importOne(context, title) {
 	let clips = {};
 	context.keys().map((item, index) => { clips[item.replace('./', '')] = context(item); })

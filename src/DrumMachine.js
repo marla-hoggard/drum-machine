@@ -27,15 +27,18 @@ export default class DrumMachine extends Component {
 	playDrum(letter) {
 		const drum = document.getElementById(letter);
 		drum.play();
+
+		const drumPad = document.getElementById(`${letter}-drum-pad`);
+		drumPad.classList.add('drum-pressed');
+		setTimeout(() => drumPad.classList.remove('drum-pressed'), 500);
 		this.setState({
 			lastPlayed: letter,
 		});
 	}
 
-	onKeyDown(e) {
-		console.log(e.key);
-		if (LETTER_MAP.includes(e.key)) {
-			console.log("matched!");
+	onKeyPressed(e) {
+		if (LETTER_MAP.includes(e.key.toUpperCase())) {
+			this.playDrum(e.key.toUpperCase());
 		}
 	}
 
@@ -55,7 +58,9 @@ export default class DrumMachine extends Component {
 
 	    //render function's return
 	    return (
-	      <div id="drum-player" onKeyDown={(e) => this.onKeyDown(e)}>
+	      <div id="drum-player" 
+	      	onKeyDown={(e) => this.onKeyPressed(e)} 
+	      	tabIndex="0">
 	        <Display value={this.state.lastPlayed}/>
 	        <div id="drums">
 	        	{drums}

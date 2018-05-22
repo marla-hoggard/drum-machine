@@ -26,14 +26,14 @@ body {
 }
 
 #drums {
-	display: grid;
-	width: 250px;
+	width: 300px;
 	margin: auto;
 	margin-top: 5px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 20px;
-	justify-items: center;
-	align-content: center;
+}
+
+.drum-row {
+	display: flex;
+	justify-content: space-around;
 }
 
 .drum-pad {
@@ -45,7 +45,11 @@ body {
 }
 
 .drum-pad:hover {
-	background-color: blue;
+	color: yellow;
+}
+
+.drum-pressed {
+	border: 2px green solid;
 }
 
 .drum-text {
@@ -53,8 +57,6 @@ body {
 	font-size: 20px;
 }
 
-.clip {
 
-}
 
 
