@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Audio from './Audio';
 import './index.css';
 

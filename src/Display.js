@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { DRUM_NAMES } from './constants';
 import './index.css';
 
